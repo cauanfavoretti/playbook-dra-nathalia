@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playbook de Vendas — Dra. Nathália Matos</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #FFFFFF;
+    --cream: #FDF9F7;
+    --pink-50: #FFF0F3;
+    --pink-100: #FFD6DF;
+    --pink-200: #FFB3C4;
+    --pink-300: #F28BAA;
+    --pink-400: #E06A8C;
+    --blue-50: #EEF4FB;
+    --blue-100: #CDDFF5;
+    --blue-200: #A8C7ED;
+    --blue-300: #7AAEE0;
+    --blue-400: #4E89CC;
+    --gray-100: #F5F5F5;
+    --gray-200: #E8E8E8;
+    --gray-400: #9E9E9E;
+    --gray-600: #5C5C5C;
+    --gray-800: #2C2C2C;
+    --text: #2C2C2C;
+    --text-light: #7A7A7A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ── SIDEBAR NAV ─────────────────────────────────── */
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0;
+    width: 260px;
+    height: 100vh;
+    background: var(--white);
+    border-right: 1px solid var(--pink-100);
+    overflow-y: auto;
+    z-index: 100;
+    padding: 0 0 40px;
+  }
+
+  .sidebar-logo {
+    padding: 32px 24px 24px;
+    border-bottom: 1px solid var(--pink-100);
+  }
+
+  .sidebar-logo h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--pink-400);
+    line-height: 1.3;
+  }
+
+  .sidebar-logo p {
+    font-size: 11px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+  }
+
+  .nav-section {
+    padding: 20px 24px 8px;
+  }
+
+  .nav-section-title {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--blue-400);
+    margin-bottom: 8px;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--gray-600);
+    text-decoration: none;
+    transition: all 0.2s;
+    line-height: 1.4;
+  }
+
+  .nav-link:hover {
+    background: var(--pink-50);
+    color: var(--pink-400);
+    padding-left: 16px;
+  }
+
+  /* ── MAIN CONTENT ────────────────────────────────── */
+  .main {
+    margin-left: 260px;
+    min-height: 100vh;
+  }
+
+  /* COVER */
+  .cover {
+    background: linear-gradient(135deg, var(--pink-50) 0%, var(--white) 50%, var(--blue-50) 100%);
+    padding: 100px 80px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--pink-100) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 40px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--blue-100) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cover-tag {
+    display: inline-block;
+    background: var(--pink-100);
+    color: var(--pink-400);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--gray-800);
+    margin-bottom: 16px;
+  }
+
+  .cover h1 em {
+    font-style: italic;
+    color: var(--pink-400);
+  }
+
+  .cover-sub {
+    font-size: 17px;
+    color: var(--text-light);
+    max-width: 500px;
+    margin-bottom: 48px;
+  }
+
+  .cover-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 13px;
+    color: var(--gray-600);
+  }
+
+  .badge strong {
+    display: block;
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  /* ── SECTIONS ────────────────────────────────────── */
+  .section {
+    padding: 64px 80px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .section:nth-child(even) {
+    background: var(--white);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .section-number {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--pink-200), var(--pink-300));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+
+  .section-number.blue {
+    background: linear-gradient(135deg, var(--blue-200), var(--blue-400));
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 400;
+    color: var(--gray-800);
+  }
+
+  .section-title span {
+    display: block;
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--pink-400);
+    margin-bottom: 4px;
+  }
+
+  /* ── CARDS GRID ──────────────────────────────────── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 28px;
+    transition: box-shadow 0.2s;
+  }
+
+  .section:nth-child(even) .card {
+    background: var(--cream);
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 32px rgba(240, 139, 170, 0.12);
+  }
+
+  .card-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 10px;
+  }
+
+  .card p, .card li {
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .card ul li::before {
+    content: '—';
+    color: var(--pink-300);
+    margin-right: 8px;
+  }
+
+  /* ── HIGHLIGHT BOX ───────────────────────────────── */
+  .highlight-box {
+    background: linear-gradient(135deg, var(--pink-50), var(--blue-50));
+    border: 1px solid var(--pink-100);
+    border-radius: 16px;
+    padding: 32px 40px;
+    margin: 28px 0;
+  }
+
+  .highlight-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--pink-400);
+    margin-bottom: 12px;
+  }
+
+  .highlight-box p {
+    color: var(--gray-600);
+    font-size: 14px;
+  }
+
+  /* ── TABLE ───────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  .data-table thead tr {
+    background: linear-gradient(135deg, var(--pink-100), var(--blue-100));
+  }
+
+  .data-table thead th {
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--gray-800);
+    font-size: 13px;
+  }
+
+  .data-table tbody tr {
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .data-table tbody tr:hover {
+    background: var(--pink-50);
+  }
+
+  .data-table tbody td {
+    padding: 14px 18px;
+    color: var(--gray-600);
+    vertical-align: top;
+  }
+
+  /* ── PRODUCT CARDS ───────────────────────────────── */
+  .product-card {
+    background: var(--white);
+    border-radius: 20px;
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+
+  .product-card:hover {
+    box-shadow: 0 12px 40px rgba(78, 137, 204, 0.12);
+  }
+
+  .product-header {
+    background: linear-gradient(135deg, var(--pink-100) 0%, var(--blue-100) 100%);
+    padding: 28px 28px 20px;
+  }
+
+  .product-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--gray-800);
+  }
+
+  .product-header p {
+    font-size: 13px;
+    color: var(--gray-600);
+    margin-top: 4px;
+  }
+
+  .product-body {
+    padding: 24px 28px;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .tag {
+    background: var(--pink-50);
+    color: var(--pink-400);
+    border: 1px solid var(--pink-100);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .tag.blue {
+    background: var(--blue-50);
+    color: var(--blue-400);
+    border-color: var(--blue-100);
+  }
+
+  /* ── ICP ─────────────────────────────────────────── */
+  .icp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .icp-card {
+    border-radius: 16px;
+    padding: 28px;
+  }
+
+  .icp-card.primary {
+    background: linear-gradient(135deg, var(--pink-50), var(--white));
+    border: 2px solid var(--pink-200);
+    grid-column: 1 / -1;
+  }
+
+  .icp-card.secondary {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-100);
+  }
+
+  .icp-card.negative {
+    background: var(--gray-100);
+    border: 1px solid var(--gray-200);
+  }
+
+  .icp-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .icp-card.primary .icp-label { color: var(--pink-400); }
+  .icp-card.secondary .icp-label { color: var(--blue-400); }
+  .icp-card.negative .icp-label { color: var(--gray-400); }
+
+  .icp-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 14px;
+  }
+
+  .icp-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .icp-list li {
+    font-size: 14px;
+    color: var(--gray-600);
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .icp-list li:last-child { border-bottom: none; }
+
+  .icp-list li::before {
+    content: '✓';
+    color: var(--pink-300);
+    margin-right: 8px;
+    font-weight: 600;
+  }
+
+  .icp-card.negative .icp-list li::before {
+    content: '✗';
+    color: var(--gray-400);
+  }
+
+  /* ── FLUXOGRAMA ──────────────────────────────────── */
+  .flow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 20px 0;
+  }
+
+  .flow-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .flow-box {
+    background: var(--white);
+    border: 1px solid var(--pink-200);
+    border-radius: 12px;
+    padding: 14px 20px;
+    text-align: center;
+    min-width: 140px;
+    max-width: 180px;
+  }
+
+  .flow-box.start {
+    background: linear-gradient(135deg, var(--pink-300), var(--pink-400));
+    border-color: transparent;
+    color: var(--white);
+  }
+
+  .flow-box.end {
+    background: linear-gradient(135deg, var(--blue-300), var(--blue-400));
+    border-color: transparent;
+    color: var(--white);
+  }
+
+  .flow-box.decision {
+    background: var(--pink-50);
+    border-color: var(--pink-300);
+    border-style: dashed;
+  }
+
+  .flow-box p {
+    font-size: 13px;
+    font-weight: 500;
+    color: inherit;
+    line-height: 1.3;
+  }
+
+  .flow-box.start p, .flow-box.end p { color: var(--white); }
+
+  .flow-arrow {
+    font-size: 20px;
+    color: var(--pink-300);
+    flex-shrink: 0;
+  }
+
+  .flow-arrow.down {
+    display: block;
+    text-align: center;
+    margin: 4px 0;
+    color: var(--pink-300);
+    font-size: 22px;
+  }
+
+  .flow-branch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+    max-width: 560px;
+  }
+
+  .flow-branch-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+
+  .flow-branch-label.yes { color: var(--blue-400); }
+  .flow-branch-label.no { color: var(--pink-400); }
+
+  /* ── SCRIPT CARDS ────────────────────────────────── */
+  .script-section {
+    margin-bottom: 36px;
+  }
+
+  .script-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--pink-100);
+  }
+
+  .script-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--pink-200), var(--pink-400));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+
+  .script-title h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--gray-800);
+  }
+
+  .script-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .script-step {
+    background: var(--white);
+    border-left: 3px solid var(--pink-200);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 20px;
+  }
+
+  .section:nth-child(even) .script-step {
+    background: var(--cream);
+  }
+
+  .script-step-day {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--pink-400);
+    margin-bottom: 4px;
+  }
+
+  .script-step p {
+    font-size: 14px;
+    color: var(--gray-600);
+  }
+
+  .script-message {
+    background: var(--pink-50);
+    border: 1px solid var(--pink-100);
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 14px;
+    color: var(--gray-700);
+    font-style: italic;
+    line-height: 1.6;
+    margin-top: 8px;
+  }
+
+  .script-message strong {
+    font-style: normal;
+    color: var(--gray-800);
+    display: block;
+    margin-bottom: 4px;
+    font-style: normal;
+  }
+
+  /* ── ROLE CARDS ──────────────────────────────────── */
+  .role-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+
+  .section:nth-child(even) .role-card {
+    background: var(--cream);
+    border-color: var(--pink-100);
+  }
+
+  .role-header {
+    background: linear-gradient(135deg, var(--pink-50), var(--blue-50));
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--gray-200);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .role-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--pink-200), var(--blue-200));
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .role-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--gray-800);
+  }
+
+  .role-header p {
+    font-size: 13px;
+    color: var(--text-light);
+  }
+
+  .role-body {
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+  }
+
+  .role-col h4 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--blue-400);
+    margin-bottom: 12px;
+  }
+
+  .role-col ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .role-col ul li {
+    font-size: 13.5px;
+    color: var(--gray-600);
+    padding: 5px 0;
+    border-bottom: 1px solid var(--gray-100);
+    line-height: 1.5;
+  }
+
+  .role-col ul li:last-child { border-bottom: none; }
+
+  .role-col ul li::before {
+    content: '→';
+    color: var(--pink-300);
+    margin-right: 7px;
+    font-size: 12px;
+  }
+
+  .salary-box {
+    background: linear-gradient(135deg, var(--pink-50), var(--blue-50));
+    border: 1px solid var(--pink-100);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 12px;
+  }
+
+  .salary-box .salary-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--pink-400);
+    margin-bottom: 8px;
+  }
+
+  .salary-box .salary-item {
+    font-size: 13px;
+    color: var(--gray-600);
+    padding: 3px 0;
+  }
+
+  .salary-box .salary-item strong {
+    color: var(--gray-800);
+  }
+
+  /* ── OBJECTION CARDS ─────────────────────────────── */
+  .objection-card {
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid var(--gray-200);
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+
+  .section:nth-child(even) .objection-card {
+    background: var(--cream);
+  }
+
+  .objection-q {
+    background: var(--pink-50);
+    border-bottom: 1px solid var(--pink-100);
+    padding: 16px 24px;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--pink-400);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .objection-q::before {
+    content: '"';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--pink-200);
+    flex-shrink: 0;
+  }
+
+  .objection-a {
+    padding: 16px 24px;
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+
+  /* ── FOOTER ──────────────────────────────────────── */
+  .footer {
+    background: var(--white);
+    border-top: 1px solid var(--pink-100);
+    padding: 40px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+
+  .footer p {
+    font-size: 13px;
+    color: var(--text-light);
+  }
+
+  .footer strong {
+    color: var(--pink-400);
+  }
+
+  /* ── DIVIDER ─────────────────────────────────────── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--pink-200), var(--blue-200), transparent);
+    margin: 40px 0;
+  }
+
+  /* ── TWO COL ─────────────────────────────────────── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* ── PRINT ───────────────────────────────────────── */
+  @media print {
+    .sidebar { display: none; }
+    .main { margin-left: 0; }
+    .section { page-break-inside: avoid; }
+  }
+
+  @media (max-width: 900px) {
+    .sidebar { display: none; }
+    .main { margin-left: 0; }
+    .cover, .section { padding: 48px 32px; }
+    .role-body { grid-template-columns: 1fr; }
+    .icp-grid { grid-template-columns: 1fr; }
+    .two-col, .three-col { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <h1>Dra. Nathália<br>Matos</h1>
+    <p>Playbook de Vendas</p>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title">Boas-vindas</div>
+    <a href="#boas-vindas" class="nav-link">Manual de Boas-vindas</a>
+    <a href="#missao" class="nav-link">Missão, Visão e Valores</a>
+    <a href="#sobre" class="nav-link">Sobre a Empresa</a>
+    <a href="#expert" class="nav-link">Sobre a Expert</a>
+    <a href="#cultura" class="nav-link">Nossa Cultura</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title">Mercado</div>
+    <a href="#mercado" class="nav-link">Potencial de Mercado</a>
+    <a href="#concorrentes" class="nav-link">Concorrentes</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title">Produtos</div>
+    <a href="#produtos" class="nav-link">Dermatologia Clínica</a>
+    <a href="#produto2" class="nav-link">Dermatologia Estética</a>
+    <a href="#produto3" class="nav-link">Telemedicina</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title">Clientes</div>
+    <a href="#icp" class="nav-link">ICP — Perfil Ideal</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title">Operação</div>
+    <a href="#fluxo" class="nav-link">Mapa de Operação</a>
+    <a href="#scripts" class="nav-link">Scripts de Vendas</a>
+    <a href="#objecoes" class="nav-link">Quebra de Objeções</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title">Time Comercial</div>
+    <a href="#time" class="nav-link">SDR</a>
+    <a href="#bdr" class="nav-link">BDR</a>
+    <a href="#closer" class="nav-link">Closer</a>
+    <a href="#posvenda" class="nav-link">Pós-Venda</a>
+    <a href="#farmer" class="nav-link">Farmer</a>
+    <a href="#crm" class="nav-link">Analista de CRM</a>
+    <a href="#resgate" class="nav-link">Resgate de Orçamento</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- CAPA -->
+  <div class="cover" id="boas-vindas">
+    <div class="cover-tag">Documento Interno — Confidencial</div>
+    <h1>Playbook de <em>Vendas</em><br>Dra. Nathália Matos</h1>
+    <p class="cover-sub">Manual completo de operação comercial para a clínica de dermatologia. Guia estratégico para a equipe de vendas e atendimento.</p>
+    <div class="cover-badges">
+      <div class="badge"><strong>CRM-AM 6402</strong>Registro Médico</div>
+      <div class="badge"><strong>Manaus — AM</strong>Chapada, Edif. Skye Platinum</div>
+      <div class="badge"><strong>(92) 98449-7829</strong>WhatsApp Comercial</div>
+      <div class="badge"><strong>2025</strong>Versão Atual</div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       1. MANUAL DE BOAS-VINDAS
+  ════════════════════════════════════════════════ -->
+  <section class="section" id="missao">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <div class="section-title">
+        <span>Manual de Boas-Vindas</span>
+        Missão, Visão e Valores
+      </div>
+    </div>
+
+    <div class="three-col">
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <h3>Missão</h3>
+        <p>Oferecer atendimento dermatológico humanizado, personalizado e de excelência, integrando saúde e estética para transformar a autoestima e o bem-estar dos nossos pacientes.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌟</div>
+        <h3>Visão</h3>
+        <p>Ser a dermatologista de referência em Manaus no segmento premium, reconhecida pela combinação única de competência científica, humanização e resultados naturais e elegantes.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💎</div>
+        <h3>Valores</h3>
+        <ul>
+          <li>Humanização no atendimento</li>
+          <li>Naturalidade e elegância</li>
+          <li>Segurança e ética médica</li>
+          <li>Cuidado personalizado</li>
+          <li>Excelência e atualização contínua</li>
+          <li>Empatia e escuta ativa</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div id="sobre" class="section-header" style="margin-bottom:24px;">
+      <div class="section-number">1.2</div>
+      <div class="section-title">
+        <span>Contexto</span>
+        Sobre a Empresa
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>"Sua pele merece cuidado e atenção"</h3>
+      <p>A clínica da Dra. Nathália Matos é uma referência em dermatologia premium em Manaus, localizada no Edifício Skye Platinum Office, na Chapada — um dos endereços mais valorizados da capital amazonense. O modelo de atendimento combina consultas particulares com hora marcada, telemedicina e procedimentos estéticos de alto nível, sempre com foco em resultados naturais e experiência premium para o paciente.</p>
+    </div>
+
+    <div class="two-col" style="margin-top: 24px;">
+      <div class="card">
+        <h3>📍 Endereço</h3>
+        <p>Edifício Skye Platinum Office<br>
+        Av. Dr. Theomário Pinto da Costa, 811<br>
+        Sala 606 — Chapada<br>
+        Manaus/AM — Próximo ao Amazonas Shopping</p>
+      </div>
+      <div class="card">
+        <h3>📞 Contatos</h3>
+        <p>WhatsApp: <strong>(92) 98449-7829</strong><br>
+        E-mail: contato@dranathaliamatos.com.br<br>
+        Site: dranathaliamatos.com.br<br>
+        Instagram: @dranathaliamatos</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div id="expert" class="section-header" style="margin-bottom:24px;">
+      <div class="section-number">1.3</div>
+      <div class="section-title">
+        <span>Autoridade</span>
+        Sobre a Expert / Sócia
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-icon">👩‍⚕️</div>
+        <h3>Dra. Nathália Matos</h3>
+        <p><strong>CRM-AM:</strong> 6402 &nbsp;|&nbsp; <strong>RQE:</strong> 3097</p>
+        <div class="divider" style="margin: 12px 0;"></div>
+        <ul>
+          <li>Especialista em Dermatologia</li>
+          <li>Formada pela Fundação de Medicina Tropical Dr. Heitor Vieira Dourado</li>
+          <li>Membro da Sociedade Brasileira de Dermatologia</li>
+          <li>Membro da American Academy of Dermatology</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏆</div>
+        <h3>Diferenciais da Doutora</h3>
+        <ul>
+          <li>Atendimento humanizado e empático</li>
+          <li>Protocolos personalizados para cada paciente</li>
+          <li>Técnicas modernas com resultados naturais</li>
+          <li>Formação internacional reconhecida</li>
+          <li>Nota 5.0 no Google com dezenas de avaliações</li>
+          <li>Atende adulto e infantil</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div id="cultura" class="section-header" style="margin-bottom:24px;">
+      <div class="section-number">1.4</div>
+      <div class="section-title">
+        <span>Identidade</span>
+        Nossa Cultura
+      </div>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">🤍</div>
+        <h3>Atendimento Premium</h3>
+        <p>Cada paciente é único. Nenhuma consulta é igual à outra. Protocolos são criados sob medida para a necessidade individual.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌿</div>
+        <h3>Naturalidade Acima de Tudo</h3>
+        <p>Resultados elegantes e discretos. A beleza natural de cada paciente é realçada, nunca transformada artificialmente.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💬</div>
+        <h3>Escuta Ativa</h3>
+        <p>Antes de qualquer procedimento, ouvimos. A dor emocional do paciente é tão importante quanto o diagnóstico clínico.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔒</div>
+        <h3>Ética e Segurança</h3>
+        <p>Jamais realizamos procedimentos desnecessários. A segurança do paciente é a maior prioridade em qualquer decisão clínica.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+       2. ESTUDO DE MERCADO
+  ════════════════════════════════════════════════ -->
+  <section class="section" id="mercado">
+    <div class="section-header">
+      <div class="section-number blue">2</div>
+      <div class="section-title">
+        <span>Estudo de Mercado</span>
+        Potencial de Mercado
+      </div>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Mercado Nacional</h3>
+        <p>O Brasil é o 2º país do mundo em número de cirurgiões plásticos e dermatologistas. O mercado de dermatologia estética cresce acima de 12% ao ano, impulsionado pelo aumento da preocupação com autocuidado.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌆</div>
+        <h3>Manaus — AM</h3>
+        <p>Capital com mais de 2 milhões de habitantes, alta concentração de classe média e classe A, e mercado de saúde premium em expansão. Baixa concorrência de alto padrão no segmento dermatológico.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👩</div>
+        <h3>Público Feminino</h3>
+        <p>Mulheres respondem por mais de 78% das consultas dermatológicas estéticas no Brasil. O segmento de rejuvenescimento e harmonização facial cresce 20% ao ano entre 35–55 anos.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <h3>Telemedicina</h3>
+        <p>Após a pandemia, a telemedicina dermatológica consolidou-se como modalidade permanente. Alcance regional do interior do Amazonas representa uma oportunidade de expansão significativa.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div id="concorrentes" class="section-header" style="margin-bottom:24px;">
+      <div class="section-number blue">2.2</div>
+      <div class="section-title">
+        <span>Análise</span>
+        Concorrentes
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Como analisar a concorrência</h3>
+      <p>Para cada concorrente direto identificado, preencha a ficha abaixo com: briefing da clínica, análise de redes sociais (Instagram, TikTok, YouTube) e levantamento da Biblioteca de Anúncios do Meta. Isso permite identificar gargalos, oportunidades de posicionamento e benchmarks de comunicação.</p>
+    </div>
+
+    <div style="overflow-x: auto; margin-top: 24px; border-radius: 16px; border: 1px solid var(--gray-200);">
+    <table class="data-table" style="min-width: 860px;">
+      <thead>
+        <tr>
+          <th style="min-width:120px;">Critério</th>
+          <th>Dra. Walquíria Tupinambá</th>
+          <th>Dermatologista em Manaus<br><span style="font-weight:400; font-size:11px; text-transform:none; letter-spacing:0;">(Dr. Amílcar Monte Rey Jr.)</span></th>
+          <th>Dra. Janaina Tirapelle</th>
+          <th style="background: linear-gradient(135deg, var(--pink-50), var(--blue-50));">⭐ Dra. Nathália Matos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Posicionamento</strong></td>
+          <td>Dermatologia premium + técnica</td>
+          <td>Autoridade médica premium</td>
+          <td>Dermatologia premium feminina</td>
+          <td style="background: var(--pink-50); font-weight:600; color: var(--pink-400);">Premium + Humanizado</td>
+        </tr>
+        <tr>
+          <td><strong>Ticket Médio</strong></td>
+          <td>Alto</td>
+          <td>Alto</td>
+          <td>Alto</td>
+          <td style="background: var(--pink-50); font-weight:600; color: var(--pink-400);">Alto</td>
+        </tr>
+        <tr>
+          <td><strong>Seguidores IG</strong></td>
+          <td>Forte presença regional</td>
+          <td>Forte autoridade local</td>
+          <td>Boa autoridade digital</td>
+          <td style="background: var(--pink-50); color: var(--blue-400); font-weight:600;">Em crescimento 📈</td>
+        </tr>
+        <tr>
+          <td><strong>Anúncios ativos</strong></td>
+          <td>✓ Sim</td>
+          <td>✓ Sim</td>
+          <td>✓ Sim</td>
+          <td style="background: var(--pink-50); font-weight:600; color: var(--pink-400);">✓ Sim</td>
+        </tr>
+        <tr>
+          <td><strong>Telemedicina</strong></td>
+          <td style="color: var(--gray-400);">Parcial</td>
+          <td style="color: var(--gray-400);">Não muito divulgado</td>
+          <td style="color: var(--gray-400);">Parcial</td>
+          <td style="background: var(--pink-50); font-weight:700; color: var(--blue-400);">✓ Sim — Diferencial!</td>
+        </tr>
+        <tr>
+          <td><strong>Avaliações Google</strong></td>
+          <td>5.0 ★★★★★ <span style="color:var(--gray-400); font-size:12px;">(227)</span></td>
+          <td>4.9 ★★★★★ <span style="color:var(--gray-400); font-size:12px;">(529)</span></td>
+          <td>5.0 ★★★★★ <span style="color:var(--gray-400); font-size:12px;">(269)</span></td>
+          <td style="background: var(--pink-50); font-weight:600; color: var(--pink-400);">4.8–5.0 ★★★★★ <span style="font-size:12px; font-weight:400;">(89 — crescendo)</span></td>
+        </tr>
+        <tr>
+          <td><strong>Diferencial</strong></td>
+          <td>Forte autoridade clínica</td>
+          <td>Escala + reputação consolidada</td>
+          <td>Confiança e tradição</td>
+          <td style="background: var(--pink-50); font-weight:600; color: var(--pink-400);">Naturalidade + Empatia</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="highlight-box" style="margin-top: 24px;">
+      <h3>🔍 Análise Estratégica</h3>
+      <p>A Dra. Nathália compete no mesmo segmento premium dos três concorrentes, mas se diferencia pelo posicionamento humanizado e pela telemedicina ativa — algo que nenhum dos concorrentes explora de forma clara. A oportunidade está em escalar as avaliações Google (hoje em 89 vs. 527 do concorrente líder) e fortalecer a presença digital com conteúdo de autoridade + provas sociais.</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+       3. PRODUTOS
+  ════════════════════════════════════════════════ -->
+  <section class="section" id="produtos">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <div class="section-title">
+        <span>Portfólio</span>
+        Produtos e Serviços
+      </div>
+    </div>
+
+    <div class="product-card" style="margin-bottom: 24px;">
+      <div class="product-header">
+        <h3>Produto 1 — Dermatologia Clínica</h3>
+        <p>Diagnóstico e tratamento de doenças da pele, cabelo e unhas</p>
+      </div>
+      <div class="product-body">
+        <div class="two-col">
+          <div>
+            <p style="font-size:13px; color: var(--text-light); margin-bottom: 10px;"><strong>Pele</strong></p>
+            <div class="tag-list">
+              <span class="tag">Psoríase</span>
+              <span class="tag">Urticária</span>
+              <span class="tag">Dermatite de Contato</span>
+              <span class="tag">Biópsia de pele</span>
+              <span class="tag">Remoção de sinais</span>
+              <span class="tag">Remoção de cistos</span>
+            </div>
+          </div>
+          <div>
+            <p style="font-size:13px; color: var(--text-light); margin-bottom: 10px;"><strong>Cabelo & Unhas</strong></p>
+            <div class="tag-list">
+              <span class="tag blue">Queda capilar</span>
+              <span class="tag blue">Alopecia</span>
+              <span class="tag blue">Doenças das unhas</span>
+              <span class="tag blue">Biópsia de couro cabeludo</span>
+              <span class="tag blue">Biópsia de unhas</span>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-box" style="margin-top: 20px;">
+          <h3>Argumentação de Vendas</h3>
+          <p>A saúde da pele impacta diretamente a autoestima. Uma consulta clínica com a Dra. Nathália não é apenas diagnóstico — é o primeiro passo para recuperar a confiança. Ideal para quem sofre com queda capilar, manchas ou doenças recorrentes sem resposta adequada.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" style="margin-bottom: 24px;" id="produto2">
+      <div class="product-header">
+        <h3>Produto 2 — Dermatologia Estética</h3>
+        <p>Procedimentos estéticos com foco em rejuvenescimento natural e harmonização</p>
+      </div>
+      <div class="product-body">
+        <div class="tag-list" style="margin-bottom: 20px;">
+          <span class="tag">Harmonização Facial</span>
+          <span class="tag">Lifting sem cirurgia</span>
+          <span class="tag">Tratamento de rugas</span>
+          <span class="tag">Clareamento de manchas</span>
+          <span class="tag">Tratamento de melasma</span>
+          <span class="tag">Bioestimuladores de colágeno</span>
+          <span class="tag">Preenchimento labial</span>
+          <span class="tag">Lipo de papada</span>
+          <span class="tag">Rejuvenescimento facial</span>
+          <span class="tag">Estímulo de colágeno</span>
+        </div>
+        <div class="highlight-box">
+          <h3>Argumentação de Vendas</h3>
+          <p>Resultados naturais e elegantes que realçam a beleza sem transformar artificialmente. A Dra. Nathália tem a habilidade de combinar técnica e sensibilidade estética, entregando resultados que deixam as pacientes mais confiantes — sem que ninguém perceba que "fizeram algo".</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" id="produto3">
+      <div class="product-header">
+        <h3>Produto 3 — Telemedicina & Atendimento Online</h3>
+        <p>Consultas remotas com a mesma qualidade e personalização do atendimento presencial</p>
+      </div>
+      <div class="product-body">
+        <div class="two-col">
+          <div>
+            <p style="font-size:14px; color: var(--gray-600); line-height: 1.7;">Consultas online para pacientes de qualquer localidade, especialmente interior do Amazonas. Diagnóstico visual de doenças de pele, acompanhamento de tratamentos e renovação de receitas com praticidade e segurança.</p>
+          </div>
+          <div>
+            <div class="highlight-box" style="margin: 0;">
+              <h3>Quando indicar</h3>
+              <p>Para pacientes fora de Manaus, que trabalham no horário comercial, mães com filhos pequenos ou quem prefere comodidade. Excelente para follow-up pós-procedimento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+       4. ICP
+  ════════════════════════════════════════════════ -->
+  <section class="section" id="icp">
+    <div class="section-header">
+      <div class="section-number blue">4</div>
+      <div class="section-title">
+        <span>ICP</span>
+        Perfil de Cliente Ideal
+      </div>
+    </div>
+
+    <!-- PERFIL GERAL -->
+    <div class="icp-card primary" style="border-radius:16px; padding:32px; margin-bottom:20px;">
+      <div class="icp-label">⭐ Perfil Geral do Cliente Ideal</div>
+      <h3>Pessoas que valorizam aparência, autoestima e saúde da pele</h3>
+      <div class="three-col" style="margin-top:20px;">
+        <div>
+          <p style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--pink-400); margin-bottom:10px;">Demográfico</p>
+          <ul class="icp-list">
+            <li>Faixa etária: 25 a 60 anos</li>
+            <li>Classe média e média alta</li>
+            <li>Renda familiar: R$ 6k – R$ 20k</li>
+            <li>Manaus/AM e interior (telemedicina)</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--pink-400); margin-bottom:10px;">Comportamento</p>
+          <ul class="icp-list">
+            <li>Pesquisa sintomas online antes da consulta</li>
+            <li>Alto consumo de conteúdo digital</li>
+            <li>Segue dermatologistas e influencers</li>
+            <li>Ativa em grupos de WhatsApp</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--pink-400); margin-bottom:10px;">Gatilhos de Conversão</p>
+          <ul class="icp-list">
+            <li>Precisa de confiança e acolhimento</li>
+            <li>Busca autoridade médica</li>
+            <li>Chega com inseguranças e dúvidas</li>
+            <li>Diagnóstico personalizado é o gatilho</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- DORES / DESEJOS / OBJEÇÕES / CANAIS -->
+    <div class="icp-grid" style="grid-template-columns: 1fr 1fr; margin-bottom:20px;">
+      <div class="icp-card secondary" style="border-radius:16px; padding:28px;">
+        <div class="icp-label" style="color:var(--pink-400);">😣 Principais Dores</div>
+        <h3 style="font-size:18px; margin-bottom:12px;">O que os faz buscar ajuda</h3>
+        <ul class="icp-list">
+          <li>Acne persistente</li>
+          <li>Queda de cabelo / calvície</li>
+          <li>Ressecamento, manchas e sensibilidade</li>
+          <li>Medo de doenças dermatológicas</li>
+          <li>Baixa autoestima relacionada à aparência</li>
+        </ul>
+      </div>
+      <div class="icp-card secondary" style="border-radius:16px; padding:28px; background: var(--blue-50); border-color: var(--blue-100);">
+        <div class="icp-label">✨ Principais Desejos</div>
+        <h3 style="font-size:18px; margin-bottom:12px;">O que realmente querem</h3>
+        <ul class="icp-list">
+          <li>Pele saudável e bonita</li>
+          <li>Recuperar confiança e autoestima</li>
+          <li>Diagnóstico preciso</li>
+          <li>Tratamentos eficazes e personalizados</li>
+          <li>Prevenção e acompanhamento médico</li>
+        </ul>
+      </div>
+      <div class="icp-card negative" style="border-radius:16px; padding:28px;">
+        <div class="icp-label">🚧 Principais Objeções</div>
+        <h3 style="font-size:18px; margin-bottom:12px;">O que trava a decisão</h3>
+        <ul class="icp-list">
+          <li>Medo de tratamentos caros</li>
+          <li>Medo de procedimentos dolorosos</li>
+          <li>Crença de que "não tem solução"</li>
+          <li>Achar que é apenas vaidade</li>
+          <li>Esperar melhora espontânea</li>
+        </ul>
+      </div>
+      <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius:16px; padding:28px;">
+        <div class="icp-label" style="color:var(--blue-400);">📱 Comportamento Digital</div>
+        <h3 style="font-size:18px; margin-bottom:12px; font-family: 'Cormorant Garamond', serif;">Onde encontramos este cliente</h3>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px;">
+          <span class="tag">Google</span>
+          <span class="tag">YouTube</span>
+          <span class="tag">Instagram</span>
+          <span class="tag">TikTok</span>
+          <span class="tag blue">Facebook</span>
+          <span class="tag blue">WhatsApp</span>
+        </div>
+        <p style="font-size:13px; color:var(--gray-600);">Conteúdos consumidos: beleza, saúde feminina, saúde masculina, maternidade e envelhecimento saudável.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- PERSONAS -->
+    <div style="margin-bottom:16px;">
+      <p style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--blue-400); margin-bottom:4px;">Personas Extraídas</p>
+      <p style="font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--gray-800);">4 Perfis de Paciente Ideal</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+
+      <!-- Persona 1 -->
+      <div style="background:var(--white); border:1px solid var(--gray-200); border-radius:20px; overflow:hidden;">
+        <div style="background:linear-gradient(135deg, var(--pink-100), var(--pink-50)); padding:22px 26px 16px; border-bottom:1px solid var(--pink-100);">
+          <div style="font-size:32px; margin-bottom:8px;">👩</div>
+          <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--pink-400);">Persona 1</p>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:var(--gray-800); margin-top:2px;">Mulher Jovem com Acne</h3>
+        </div>
+        <div style="padding:22px 26px;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:14px;">
+            <div>
+              <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--gray-400); margin-bottom:6px;">Perfil</p>
+              <p style="font-size:13px; color:var(--gray-600); line-height:1.6;">27 anos · Analista de Marketing · Solteira · Renda: R$ 8 mil</p>
+            </div>
+            <div>
+              <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--gray-400); margin-bottom:6px;">Canais</p>
+              <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                <span class="tag" style="font-size:11px;">TikTok</span>
+                <span class="tag" style="font-size:11px;">YouTube</span>
+                <span class="tag" style="font-size:11px;">Instagram</span>
+              </div>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
+            <div style="background:var(--pink-50); border-radius:10px; padding:12px;">
+              <p style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--pink-400); margin-bottom:5px;">😣 Dores</p>
+              <p style="font-size:12px; color:var(--gray-600);">Acne persistente · Baixa autoestima</p>
+            </div>
+            <div style="background:var(--blue-50); border-radius:10px; padding:12px;">
+              <p style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--blue-400); margin-bottom:5px;">✨ Desejos</p>
+              <p style="font-size:12px; color:var(--gray-600);">Pele limpa · Sair sem maquiagem</p>
+            </div>
+            <div style="background:var(--gray-100); border-radius:10px; padding:12px;">
+              <p style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--gray-400); margin-bottom:5px;">🚧 Objeções</p>
+              <p style="font-size:12px; color:var(--gray-600);">Medo de custo e dor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Persona 2 -->
+      <div style="background:var(--white); border:1px solid var(--gray-200); border-radius:20px; overflow:hidden;">
+        <div style="background:linear-gradient(135deg, var(--blue-100), var(--blue-50)); padding:22px 26px 16px; border-bottom:1px solid var(--blue-100);">
+          <div style="font-size:32px; margin-bottom:8px;">👨</div>
+          <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--blue-400);">Persona 2</p>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:var(--gray-800); margin-top:2px;">Homem com Queda de Cabelo</h3>
+        </div>
+        <div style="padding:22px 26px;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:14px;">
+            <div>
+              <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--gray-400); margin-bottom:6px;">Perfil</p>
+              <p style="font-size:13px; color:var(--gray-600); line-height:1.6;">35 anos · Engenheiro Civil · Casado · Renda: R$ 15 mil</p>
+            </div>
+            <div>
+              <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--gray-400); margin-bottom:6px;">Canais</p>
+              <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                <span class="tag blue" style="font-size:11px;">YouTube</span>
+                <span class="tag blue" style="font-size:11px;">Google</span>
+              </div>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
+            <div style="background:var(--pink-50); border-radius:10px; padding:12px;">
+              <p style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--pink-400); margin-bottom:5px;">😣 Dores</p>
+              <p style="font-size:12px; color:var(--gray-600);">Entradas e falhas · Medo da calvície</p>
+            </div>
+            <div style="background:var(--blue-50); border-radius:10px; padding:12px;">
+              <p style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--blue-400); margin-bottom:5px;">✨ Desejos</p>
+              <p style="font-size:12px; color:var(--gray-600);">Recuperar densidade · Mais confiança</p>
+            </div>
+            <div style="background:var(--gray-100); border-radius:10px; padding:12px;">
+              <p style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--gray-400); margin-bottom:5px;">🚧 Objeções</p>
+              <p style="font-size:12px; color:var(--gray-600);">Acha que tratamento não funciona</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Persona 3 -->
+      <div style="background:var(--white); border:1px solid var(--gray-200); border-radius:20px; overflow:hidden;">
+        <div style="background:linear-gradient(135deg, var(--pink-50), var(--blue-50)); padding:22px 26px 16px; border-bottom:1px solid var(--gray-200);">
+          <div style="font-size:32px; margin-bottom:8px;">👩‍🦳</div>
+          <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--pink-400);">Persona 3</p>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:var(--gray-800); margin-top:2px;">Mulher na Menopausa</h3>
+        </div>
+        <div style="padding:22px 26px;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:14px;">
+            <div>
+              <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--gray-400); margin-bottom:6px;">Perfil</p>
+              <p style="font-size:13px; color:var(--gray-600); line-height:1.6;">58 anos · Professora aposentada · Viúva · Renda: R$ 6 mil</p>
+            </div>
+            <div>
+              <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--gray-400); margin-bottom:6px;">Canais</p>
+              <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                <span class="tag" style="font-size:11px;">Facebook</span>
+                <span class="tag" style="font-size:11px;">WhatsApp</span>
+                <span class="tag blue" style="font-size:11px;">Google</span>
+              </div>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
+            <div style="background:var(--pink-50); border-radius:10px; padding:12px;">
+              <p style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--pink-400); margin-bottom:5px;">😣 Dores</p>
+              <p style="font-size:12px; color:var(--gray-600);">Coceira · Pele fina · Manchas</p>
+            </div>
+            <div style="background:var(--blue-50); border-radius:10px; padding:12px;">
+              <p style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--blue-400); margin-bottom:5px;">✨ Desejos</p>
+              <p style="font-size:12px; color:var(--gray-600);">Conforto · Envelhecimento saudável</p>
+            </div>
+            <div style="background:var(--gray-100); border-radius:10px; padding:12px;">
+              <p style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--gray-400); margin-bottom:5px;">🚧 Objeções</p>
+              <p style="font-size:12px; color:var(--gray-600);">"É normal da idade"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Persona 4 -->
+      <div style="background:var(--white); border:1px solid var(--gray-200); border-radius:20px; overflow:hidden;">
+        <div style="background:linear-gradient(135deg, var(--blue-50), var(--pink-50)); padding:22px 26px 16px; border-bottom:1px solid var(--gray-200);">
+          <div style="font-size:32px; margin-bottom:8px;">👩‍👦</div>
+          <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--blue-400);">Persona 4</p>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:var(--gray-800); margin-top:2px;">Mãe Preocupada com o Filho</h3>
+        </div>
+        <div style="padding:22px 26px;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:14px;">
+            <div>
+              <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--gray-400); margin-bottom:6px;">Perfil</p>
+              <p style="font-size:13px; color:var(--gray-600); line-height:1.6;">40 anos · Psicóloga · Casada · Renda: R$ 20 mil</p>
+            </div>
+            <div>
+              <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--gray-400); margin-bottom:6px;">Canais</p>
+              <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                <span class="tag blue" style="font-size:11px;">Google</span>
+                <span class="tag blue" style="font-size:11px;">WhatsApp</span>
+                <span class="tag" style="font-size:11px;">Facebook</span>
+              </div>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
+            <div style="background:var(--pink-50); border-radius:10px; padding:12px;">
+              <p style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--pink-400); margin-bottom:5px;">😣 Dores</p>
+              <p style="font-size:12px; color:var(--gray-600);">Mancha suspeita na pele do filho</p>
+            </div>
+            <div style="background:var(--blue-50); border-radius:10px; padding:12px;">
+              <p style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--blue-400); margin-bottom:5px;">✨ Desejos</p>
+              <p style="font-size:12px; color:var(--gray-600);">Segurança · Diagnóstico rápido e preciso</p>
+            </div>
+            <div style="background:var(--gray-100); border-radius:10px; padding:12px;">
+              <p style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--gray-400); margin-bottom:5px;">🚧 Objeções</p>
+              <p style="font-size:12px; color:var(--gray-600);">Acha que é apenas alergia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="divider" style="margin-top:32px;"></div>
+
+    <!-- NÃO É CLIENTE IDEAL -->
+    <div class="icp-card negative" style="border-radius:16px; padding:28px; margin-top:4px;">
+      <div class="icp-label">✗ Não é nosso cliente ideal</div>
+      <h3 style="font-size:18px; margin-bottom:14px;">Perfis não prioritários</h3>
+      <div class="two-col">
+        <ul class="icp-list">
+          <li>Pacientes que buscam resultado extremo ou artificial</li>
+          <li>Quem espera preço de convênio no atendimento particular</li>
+          <li>Pacientes sem disponibilidade para follow-up do protocolo</li>
+        </ul>
+        <ul class="icp-list">
+          <li>Quem busca procedimentos sem indicação clínica ética</li>
+          <li>Pacientes que não valorizam o processo personalizado</li>
+          <li>Quem não aceita orientações médicas do protocolo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+       5. MAPA DE OPERAÇÃO
+  ════════════════════════════════════════════════ -->
+  <section class="section" id="fluxo">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <div class="section-title">
+        <span>Fluxograma</span>
+        Mapa de Operação Comercial
+      </div>
+    </div>
+
+    <div class="flow-container">
+      <div class="flow-row">
+        <div class="flow-box start"><p>🎯 Lead Gerado<br>(Tráfego / Indicação / Orgânico)</p></div>
+      </div>
+      <div class="flow-arrow down">↓</div>
+      <div class="flow-row">
+        <div class="flow-box"><p>📩 Primeiro Contato<br>SDR — Qualificação</p></div>
+      </div>
+      <div class="flow-arrow down">↓</div>
+      <div class="flow-row">
+        <div class="flow-box decision"><p>❓ Lead Qualificado?</p></div>
+      </div>
+      <div class="flow-arrow down">↓</div>
+      <div class="flow-branch">
+        <div>
+          <div class="flow-branch-label yes">✓ Sim</div>
+          <div class="flow-box"><p>📅 Agendamento de Consulta<br>Closer / Atendente</p></div>
+        </div>
+        <div>
+          <div class="flow-branch-label no">✗ Não</div>
+          <div class="flow-box decision"><p>🔄 Nutrição<br>Follow-up / Remarketing</p></div>
+        </div>
+      </div>
+      <div class="flow-arrow down">↓</div>
+      <div class="flow-row">
+        <div class="flow-box"><p>🔔 Lembrete de Consulta<br>D-1 e D-0</p></div>
+      </div>
+      <div class="flow-arrow down">↓</div>
+      <div class="flow-row">
+        <div class="flow-box"><p>👩‍⚕️ Consulta Realizada<br>Atendimento Dra. Nathália</p></div>
+      </div>
+      <div class="flow-arrow down">↓</div>
+      <div class="flow-row">
+        <div class="flow-box decision"><p>💬 Orçamento / Proposta<br>Apresentada?</p></div>
+      </div>
+      <div class="flow-arrow down">↓</div>
+      <div class="flow-branch">
+        <div>
+          <div class="flow-branch-label yes">✓ Fechou</div>
+          <div class="flow-box end"><p>✅ Pós-Venda<br>Fidelização & Upsell</p></div>
+        </div>
+        <div>
+          <div class="flow-branch-label no">✗ Não fechou</div>
+          <div class="flow-box decision"><p>📌 Resgate de Orçamento<br>Follow-up de Negociação</p></div>
+        </div>
+      </div>
+      <div class="flow-arrow down">↓</div>
+      <div class="flow-row">
+        <div class="flow-box end"><p>📊 CRM Atualizado<br>Analista de CRM</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+       6. SCRIPTS DE VENDAS
+  ════════════════════════════════════════════════ -->
+  <section class="section" id="scripts">
+    <div class="section-header">
+      <div class="section-number blue">6</div>
+      <div class="section-title">
+        <span>Comunicação</span>
+        Scripts de Vendas — Cadências
+      </div>
+    </div>
+
+    <!-- 6.1 Qualificação -->
+    <div class="script-section">
+      <div class="script-title">
+        <div class="script-num">1</div>
+        <h3>Cadência de Qualificação</h3>
+      </div>
+      <div class="script-steps">
+        <div class="script-step">
+          <div class="script-step-day">Contato 1 — Imediato (até 5 min após o lead entrar)</div>
+          <p>Abordagem inicial, identificação da necessidade principal e validação do perfil.</p>
+          <div class="script-message">
+            <strong>💬 Mensagem:</strong>
+            Olá, [Nome]! Tudo bem? 😊 Aqui é da equipe da Dra. Nathália Matos. Vi que você entrou em contato e adoraria entender melhor como podemos te ajudar. Qual a sua principal preocupação com a pele hoje?
+          </div>
+        </div>
+        <div class="script-step">
+          <div class="script-step-day">Contato 2 — Após resposta</div>
+          <p>Aprofundar a dor, mapear histórico e validar interesse em consulta.</p>
+          <div class="script-message">
+            <strong>💬 Perguntas de qualificação:</strong>
+            Há quanto tempo você tem esse problema? Já fez algum tratamento antes? Você prefere atendimento presencial ou online? Qual a sua disponibilidade de agenda?
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 6.2 Follow-up sem resposta -->
+    <div class="script-section">
+      <div class="script-title">
+        <div class="script-num">2</div>
+        <h3>Cadência de Follow-Up 1 — Sem Resposta</h3>
+      </div>
+      <div class="script-steps">
+        <div class="script-step">
+          <div class="script-step-day">Dia 1 — 2h após o primeiro contato sem resposta</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            Olá, [Nome]! Passei aqui para verificar se você recebeu minha mensagem 😊 Quando tiver um momento, adoraria te ajudar a encontrar o melhor caminho para cuidar da sua pele. Estarei aqui!
+          </div>
+        </div>
+        <div class="script-step">
+          <div class="script-step-day">Dia 2 — Manhã</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            [Nome], entendo que o dia a dia é corrido! Deixo aqui uma informação rápida: a Dra. Nathália atende também online, sem precisar sair de casa. Posso te passar os horários disponíveis? 🌸
+          </div>
+        </div>
+        <div class="script-step">
+          <div class="script-step-day">Dia 4 — Quebra de padrão</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            [Nome], vou ser direta: sei que você nos procurou por algum motivo e gostaríamos muito de poder te ajudar. Se preferir, posso te enviar mais informações sobre os tratamentos sem compromisso. O que acha?
+          </div>
+        </div>
+        <div class="script-step">
+          <div class="script-step-day">Dia 7 — Fechamento da cadência</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            [Nome], vou encerrar por aqui para não ser inconveniente 😊 Mas saiba que a equipe da Dra. Nathália está sempre disponível quando você precisar. Cuide-se bem! 💗
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 6.3 Follow-up após primeiro contato -->
+    <div class="script-section">
+      <div class="script-title">
+        <div class="script-num">3</div>
+        <h3>Cadência de Follow-Up 2 — Após Contato mas Sem Agendamento</h3>
+      </div>
+      <div class="script-steps">
+        <div class="script-step">
+          <div class="script-step-day">Dia 1 — Reforço de valor</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            Oi, [Nome]! Fiquei pensando na nossa conversa. Queria te contar que a Dra. Nathália tem horários especiais essa semana. Seria uma ótima oportunidade para você dar o primeiro passo no seu cuidado! Posso verificar uma data para você? 🌷
+          </div>
+        </div>
+        <div class="script-step">
+          <div class="script-step-day">Dia 3 — Prova social</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            [Nome], muitas das nossas pacientes chegaram com a mesma dúvida que você tem e saíram transformadas — não só na pele, mas na autoestima! Você merece esse cuidado. Quando podemos agendar? 💪
+          </div>
+        </div>
+        <div class="script-step">
+          <div class="script-step-day">Dia 6 — Urgência</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            [Nome], vi que estamos sem horários livres para a próxima semana. Consigo segurar um horário pra você? A agenda da Dra. Nathália costuma fechar rápido 😊
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 6.4 Agendamento -->
+    <div class="script-section">
+      <div class="script-title">
+        <div class="script-num">4</div>
+        <h3>Cadência de Agendamento</h3>
+      </div>
+      <div class="script-steps">
+        <div class="script-step">
+          <div class="script-step-day">Confirmação do agendamento</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            Perfeito, [Nome]! Sua consulta está agendada para [DATA] às [HORA] com a Dra. Nathália Matos. O endereço é: Edifício Skye Platinum Office, Av. Dr. Theomário Pinto da Costa, 811, Sala 606 — Chapada, próximo ao Amazonas Shopping. Qualquer dúvida, estamos aqui! 🌸
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 6.5 Lembrete -->
+    <div class="script-section">
+      <div class="script-title">
+        <div class="script-num">5</div>
+        <h3>Cadência de Lembrete de Agendamento</h3>
+      </div>
+      <div class="script-steps">
+        <div class="script-step">
+          <div class="script-step-day">D-1 (dia anterior)</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            Oi, [Nome]! Só passando para lembrar da sua consulta amanhã, [DATA], às [HORA], com a Dra. Nathália 🌷 Qualquer imprevisto, nos avise com antecedência. Te esperamos!
+          </div>
+        </div>
+        <div class="script-step">
+          <div class="script-step-day">D-0 (manhã do dia)</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            Bom dia, [Nome]! 🌸 Só confirmando sua consulta hoje às [HORA] com a Dra. Nathália. Está tudo certo por aí?
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 6.6 Fechamento -->
+    <div class="script-section">
+      <div class="script-title">
+        <div class="script-num">6</div>
+        <h3>Cadência de Fechamento — Script de Vendas</h3>
+      </div>
+      <div class="script-steps">
+        <div class="script-step">
+          <div class="script-step-day">Pós-consulta — Apresentação do orçamento (até 30min após)</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            Olá, [Nome]! Foi um prazer receber você hoje! A Dra. Nathália preparou um protocolo personalizado especialmente para você. Posso te enviar o orçamento agora para você avaliar com calma? 💗
+          </div>
+        </div>
+        <div class="script-step">
+          <div class="script-step-day">Reforço — 24h sem resposta</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            [Nome], você recebeu o orçamento? Ficou com alguma dúvida sobre o protocolo? Estou aqui para ajudar no que precisar e garantir que você tome a melhor decisão para a sua pele 🌺
+          </div>
+        </div>
+        <div class="script-step">
+          <div class="script-step-day">Fechamento com ancoragem</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            [Nome], muitas das nossas pacientes veem resultados já nas primeiras semanas. O investimento no seu cuidado hoje vai trazer confiança e bem-estar por muito tempo. Posso reservar sua data para iniciarmos?
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 6.7 Negociação -->
+    <div class="script-section">
+      <div class="script-title">
+        <div class="script-num">7</div>
+        <h3>Cadência de Negociação</h3>
+      </div>
+      <div class="script-steps">
+        <div class="script-step">
+          <div class="script-step-day">Quando o paciente sinaliza resistência ao valor</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            Entendo, [Nome]! Posso verificar as opções de parcelamento disponíveis para você. Também temos formas de priorizar os procedimentos mais urgentes para começarmos com o que vai trazer mais resultado rapidamente. Posso te apresentar uma proposta ajustada?
+          </div>
+        </div>
+        <div class="script-step">
+          <div class="script-step-day">Reforço de valor (jamais dar desconto sem contra-proposta)</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            [Nome], entendo que o investimento é significativo. Mas quero que você saiba que cada protocolo é criado de forma única para você, com acompanhamento da Dra. Nathália em todo o processo. Isso é raro encontrar. Posso apresentar um plano de início que caiba no seu orçamento?
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 6.8 Pós-venda -->
+    <div class="script-section">
+      <div class="script-title">
+        <div class="script-num">8</div>
+        <h3>Cadência de Pós-Venda</h3>
+      </div>
+      <div class="script-steps">
+        <div class="script-step">
+          <div class="script-step-day">D+1 — Após o procedimento</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            Oi, [Nome]! 🌸 Como você está se sentindo? Alguma dúvida sobre os cuidados pós-procedimento? Estou aqui para o que precisar!
+          </div>
+        </div>
+        <div class="script-step">
+          <div class="script-step-day">D+7 — Acompanhamento</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            [Nome], já faz uma semana do seu procedimento! Como está evoluindo? A Dra. Nathália adoraria saber como você está se sentindo. Algum resultado já apareceu? 💗
+          </div>
+        </div>
+        <div class="script-step">
+          <div class="script-step-day">D+30 — Fidelização e próxima sessão</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            [Nome], já é hora de agendarmos sua próxima sessão de manutenção para garantir os resultados que você merece! Tenho horários especiais disponíveis. Posso te enviar as opções? 🌷
+          </div>
+        </div>
+        <div class="script-step">
+          <div class="script-step-day">D+30 — Solicitação de depoimento</div>
+          <div class="script-message">
+            <strong>💬</strong>
+            [Nome], sua experiência é muito importante pra nós! Você toparia deixar um comentário no Google sobre como foi seu atendimento com a Dra. Nathália? Isso ajuda outras mulheres a encontrarem o cuidado que precisam 💗 [link do Google]
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+       QUEBRA DE OBJEÇÕES
+  ════════════════════════════════════════════════ -->
+  <section class="section" id="objecoes">
+    <div class="section-header">
+      <div class="section-number">6.9</div>
+      <div class="section-title">
+        <span>Scripts</span>
+        Quebra de Objeções
+      </div>
+    </div>
+
+    <div class="objection-card">
+      <div class="objection-q">Está muito caro, não tenho esse dinheiro agora.</div>
+      <div class="objection-a"><strong>Resposta:</strong> Entendo, [Nome]! Cuidar da pele é um investimento — mas temos condições especiais de parcelamento. Além disso, podemos montar um protocolo escalonado, começando pelo que vai te trazer mais resultado primeiro. Posso te mostrar como ficaria?</div>
+    </div>
+
+    <div class="objection-card">
+      <div class="objection-q">Quero pesquisar mais antes de decidir.</div>
+      <div class="objection-a"><strong>Resposta:</strong> Claro, faz todo sentido! Posso te enviar as avaliações das nossas pacientes e alguns resultados reais? A Dra. Nathália tem nota 5.0 no Google e os depoimentos são muito bacanas. Aí você decide com mais segurança 😊</div>
+    </div>
+
+    <div class="objection-card">
+      <div class="objection-q">Tenho medo do resultado ficar artificial.</div>
+      <div class="objection-a"><strong>Resposta:</strong> Essa é uma preocupação muito válida e a Dra. Nathália compartilha esse cuidado com você! A filosofia dela é exatamente a naturalidade — resultados que realçam a sua beleza sem que ninguém perceba que você "fez algo". Você pode ver o antes e depois de pacientes reais, quer que eu envie?</div>
+    </div>
+
+    <div class="objection-card">
+      <div class="objection-q">Não tenho tempo para ir à clínica.</div>
+      <div class="objection-a"><strong>Resposta:</strong> Que ótimo que você mencionou isso! A Dra. Nathália atende também online pelo serviço de telemedicina. Você faz a consulta do conforto da sua casa, sem precisar se deslocar. Posso te passar como funciona?</div>
+    </div>
+
+    <div class="objection-card">
+      <div class="objection-q">Já fiz tratamento antes e não funcionou.</div>
+      <div class="objection-a"><strong>Resposta:</strong> Lamento que você tenha passado por isso, [Nome]. A Dra. Nathália se diferencia exatamente por criar protocolos completamente personalizados — não existe receita pronta aqui. Cada paciente tem sua pele, sua história e seu protocolo único. Você merece uma abordagem que realmente funcione para você.</div>
+    </div>
+
+    <div class="objection-card">
+      <div class="objection-q">Vou falar com meu marido/esposo antes.</div>
+      <div class="objection-a"><strong>Resposta:</strong> Com certeza, é ótimo tomar decisões juntos! Para facilitar, posso te enviar um resumo do protocolo e do investimento para você mostrar a ele? Assim fica mais fácil de conversar 😊</div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+       7. TIME COMERCIAL
+  ════════════════════════════════════════════════ -->
+  <section class="section" id="time">
+    <div class="section-header">
+      <div class="section-number blue">7</div>
+      <div class="section-title">
+        <span>Estrutura</span>
+        Time Comercial
+      </div>
+    </div>
+
+    <!-- SDR -->
+    <div class="role-card">
+      <div class="role-header">
+        <div class="role-icon">📩</div>
+        <div>
+          <h3>SDR — Sales Development Representative</h3>
+          <p>Responsável pela qualificação e primeiro contato com leads inbound</p>
+        </div>
+      </div>
+      <div class="role-body">
+        <div class="role-col">
+          <h4>Descrição do Cargo</h4>
+          <ul>
+            <li>Receber e qualificar leads que chegam pelo WhatsApp, Instagram e site</li>
+            <li>Identificar a dor principal e o perfil do paciente</li>
+            <li>Registrar todas as interações no CRM</li>
+            <li>Passar leads qualificados para o Closer</li>
+            <li>Cumprir cadência de follow-up com leads frios</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Rotina Comercial</h4>
+          <ul>
+            <li>09h – Verificar leads novos e priorizar</li>
+            <li>09h–12h – Qualificação ativa de leads</li>
+            <li>14h–17h – Follow-ups e nutrição</li>
+            <li>17h – Atualizar CRM e relatório diário</li>
+            <li>Meta: 30 contatos qualificados/semana</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Plano de Remuneração</h4>
+          <div class="salary-box">
+            <div class="salary-label">Estrutura Salarial</div>
+            <div class="salary-item"><strong>Fixo:</strong> R$ 1.800 – R$ 2.200/mês</div>
+            <div class="salary-item"><strong>Comissão:</strong> R$ 30–50 por lead qualificado que chega à consulta</div>
+            <div class="salary-item"><strong>Bônus:</strong> R$ 300 por meta de 40 leads/mês atingida</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BDR -->
+    <div class="role-card" id="bdr">
+      <div class="role-header">
+        <div class="role-icon">🔍</div>
+        <div>
+          <h3>BDR — Business Development Representative</h3>
+          <p>Prospecção ativa de novos clientes e parcerias estratégicas</p>
+        </div>
+      </div>
+      <div class="role-body">
+        <div class="role-col">
+          <h4>Descrição do Cargo</h4>
+          <ul>
+            <li>Prospectar ativamente potenciais pacientes via redes sociais</li>
+            <li>Desenvolver parcerias com salões, spas, academias e empresas</li>
+            <li>Criar e nutrir pipeline de prospects outbound</li>
+            <li>Identificar oportunidades de co-marketing</li>
+            <li>Representar a marca em eventos e networking</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Rotina Comercial</h4>
+          <ul>
+            <li>Mapeamento semanal de novas oportunidades</li>
+            <li>5 contatos de parceria por semana</li>
+            <li>Participar de eventos do segmento saúde/beleza</li>
+            <li>Relatório semanal de pipeline outbound</li>
+            <li>Meta: 15 prospects qualificados/mês</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Plano de Remuneração</h4>
+          <div class="salary-box">
+            <div class="salary-label">Estrutura Salarial</div>
+            <div class="salary-item"><strong>Fixo:</strong> R$ 2.000 – R$ 2.500/mês</div>
+            <div class="salary-item"><strong>Comissão:</strong> R$ 80 por parceria ativa firmada</div>
+            <div class="salary-item"><strong>Bônus:</strong> R$ 500 por meta mensal atingida</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLOSER -->
+    <div class="role-card" id="closer">
+      <div class="role-header">
+        <div class="role-icon">🎯</div>
+        <div>
+          <h3>Closer — Especialista em Fechamento</h3>
+          <p>Conversão de leads qualificados em pacientes pagantes</p>
+        </div>
+      </div>
+      <div class="role-body">
+        <div class="role-col">
+          <h4>Descrição do Cargo</h4>
+          <ul>
+            <li>Receber leads qualificados pelo SDR</li>
+            <li>Conduzir a conversa de fechamento com foco em valor</li>
+            <li>Apresentar protocolos e orçamentos</li>
+            <li>Superar objeções com empatia e técnica</li>
+            <li>Fechar agendamentos e vendas de procedimentos</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Rotina Comercial</h4>
+          <ul>
+            <li>Receber relatório do SDR diariamente</li>
+            <li>Contatar leads quentes em até 1h</li>
+            <li>Registrar taxa de conversão por semana</li>
+            <li>Reunião semanal de alinhamento</li>
+            <li>Meta: 60% de conversão de leads qualificados</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Plano de Remuneração</h4>
+          <div class="salary-box">
+            <div class="salary-label">Estrutura Salarial</div>
+            <div class="salary-item"><strong>Fixo:</strong> R$ 2.200 – R$ 3.000/mês</div>
+            <div class="salary-item"><strong>Comissão:</strong> 5% sobre valor dos procedimentos vendidos</div>
+            <div class="salary-item"><strong>Bônus:</strong> R$ 800 por meta de faturamento mensal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PÓS-VENDA -->
+    <div class="role-card" id="posvenda">
+      <div class="role-header">
+        <div class="role-icon">💗</div>
+        <div>
+          <h3>Pós-Venda — Especialista em Experiência</h3>
+          <p>Fidelização, acompanhamento e reativação de pacientes</p>
+        </div>
+      </div>
+      <div class="role-body">
+        <div class="role-col">
+          <h4>Descrição do Cargo</h4>
+          <ul>
+            <li>Acompanhar pacientes após consultas e procedimentos</li>
+            <li>Garantir satisfação e aderência ao protocolo</li>
+            <li>Solicitar depoimentos e avaliações Google</li>
+            <li>Executar cadência de pós-venda e fidelização</li>
+            <li>Identificar oportunidades de upsell/cross-sell</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Rotina Comercial</h4>
+          <ul>
+            <li>Ligar/mensagem para todos os pacientes no D+1</li>
+            <li>Follow-up D+7 e D+30 de cada procedimento</li>
+            <li>Agendamento proativo da próxima sessão</li>
+            <li>Gestão de avaliações online</li>
+            <li>Meta: NPS ≥ 9 e 70% de retorno em 60 dias</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Plano de Remuneração</h4>
+          <div class="salary-box">
+            <div class="salary-label">Estrutura Salarial</div>
+            <div class="salary-item"><strong>Fixo:</strong> R$ 1.800 – R$ 2.200/mês</div>
+            <div class="salary-item"><strong>Comissão:</strong> R$ 50 por upsell concretizado</div>
+            <div class="salary-item"><strong>Bônus:</strong> R$ 400 por meta de NPS e retorno atingida</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FARMER -->
+    <div class="role-card" id="farmer">
+      <div class="role-header">
+        <div class="role-icon">🌱</div>
+        <div>
+          <h3>Farmer — Gestor de Carteira de Pacientes</h3>
+          <p>Expansão e manutenção de relacionamento com pacientes ativos</p>
+        </div>
+      </div>
+      <div class="role-body">
+        <div class="role-col">
+          <h4>Descrição do Cargo</h4>
+          <ul>
+            <li>Gerir carteira de pacientes ativos e inativos</li>
+            <li>Criar estratégias de reengajamento</li>
+            <li>Identificar pacientes com potencial de upgrade</li>
+            <li>Promover novos tratamentos e procedimentos sazonais</li>
+            <li>Construir relacionamento de longo prazo</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Rotina Comercial</h4>
+          <ul>
+            <li>Revisão semanal da carteira no CRM</li>
+            <li>Contatos sazonais (aniversário, Dia da Mulher etc.)</li>
+            <li>Apresentação de novidades e protocolos</li>
+            <li>Reunião mensal de resultado de carteira</li>
+            <li>Meta: Reativar 20% dos inativos/mês</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Plano de Remuneração</h4>
+          <div class="salary-box">
+            <div class="salary-label">Estrutura Salarial</div>
+            <div class="salary-item"><strong>Fixo:</strong> R$ 2.000 – R$ 2.500/mês</div>
+            <div class="salary-item"><strong>Comissão:</strong> 3% sobre receita de pacientes reativados</div>
+            <div class="salary-item"><strong>Bônus:</strong> R$ 600 por meta de reativação mensal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANALISTA CRM -->
+    <div class="role-card" id="crm">
+      <div class="role-header">
+        <div class="role-icon">📊</div>
+        <div>
+          <h3>Analista de CRM</h3>
+          <p>Gestão de dados, relatórios e inteligência comercial</p>
+        </div>
+      </div>
+      <div class="role-body">
+        <div class="role-col">
+          <h4>Descrição do Cargo</h4>
+          <ul>
+            <li>Administrar e manter o CRM atualizado</li>
+            <li>Criar relatórios de desempenho do time comercial</li>
+            <li>Mapear funil de conversão e gargalos</li>
+            <li>Automatizar fluxos e cadências no CRM</li>
+            <li>Garantir qualidade e higiene dos dados</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Rotina Comercial</h4>
+          <ul>
+            <li>Auditoria diária de registros no CRM</li>
+            <li>Relatório semanal de funil para a gestão</li>
+            <li>Criação de dashboards mensais</li>
+            <li>Treinamento do time no uso correto do CRM</li>
+            <li>Meta: 100% dos leads registrados no CRM</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Plano de Remuneração</h4>
+          <div class="salary-box">
+            <div class="salary-label">Estrutura Salarial</div>
+            <div class="salary-item"><strong>Fixo:</strong> R$ 2.500 – R$ 3.500/mês</div>
+            <div class="salary-item"><strong>Bônus:</strong> R$ 500 por entrega de relatório estratégico mensal</div>
+            <div class="salary-item"><strong>PLR:</strong> Participação trimestral conforme meta da clínica</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESGATE DE ORÇAMENTO -->
+    <div class="role-card" id="resgate">
+      <div class="role-header">
+        <div class="role-icon">🔄</div>
+        <div>
+          <h3>Resgate de Orçamento</h3>
+          <p>Recuperação de propostas não fechadas e leads perdidos</p>
+        </div>
+      </div>
+      <div class="role-body">
+        <div class="role-col">
+          <h4>Descrição do Cargo</h4>
+          <ul>
+            <li>Identificar orçamentos enviados sem fechamento</li>
+            <li>Reengajar pacientes que receberam proposta e sumiram</li>
+            <li>Aplicar cadência de resgate com novas abordagens</li>
+            <li>Negociar condições e remover objeções finais</li>
+            <li>Registrar motivo de perda no CRM para análise</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Rotina Comercial</h4>
+          <ul>
+            <li>Levantamento diário de orçamentos abertos +3 dias</li>
+            <li>Aplicar cadência de resgate (3 tentativas em 7 dias)</li>
+            <li>Reunião semanal com Closer para alinhamento</li>
+            <li>Mapear padrões de objeção por procedimento</li>
+            <li>Meta: Recuperar 25% dos orçamentos não fechados</li>
+          </ul>
+        </div>
+        <div class="role-col">
+          <h4>Plano de Remuneração</h4>
+          <div class="salary-box">
+            <div class="salary-label">Estrutura Salarial</div>
+            <div class="salary-item"><strong>Fixo:</strong> R$ 1.800 – R$ 2.200/mês</div>
+            <div class="salary-item"><strong>Comissão:</strong> 4% sobre valor dos orçamentos recuperados</div>
+            <div class="salary-item"><strong>Bônus:</strong> R$ 500 por meta de recuperação mensal atingida</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>
+      <p><strong>Dra. Nathália Matos</strong> — Playbook de Vendas 2025</p>
+      <p style="margin-top: 4px;">Documento interno e confidencial. Distribuição restrita à equipe comercial.</p>
+    </div>
+    <div style="text-align: right;">
+      <p><strong style="color: var(--pink-400);">"Sua pele merece cuidado e atenção"</strong></p>
+      <p style="margin-top: 4px;">(92) 98449-7829 · contato@dranathaliamatos.com.br</p>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
